@@ -8,7 +8,7 @@ def leibniz_term(start, end):
     # Uses the leibiniz formula for partial sum
     # Meaning that basically it first checks if it should be a negative or positive using (-1) to the power of index, meaning the sign is alternated
     # Then it creates the appropriate denominator, by doubling the index and adding 1. For example:
-    # i= 0 then (-1)**0 = 1 2*0 = 1 1/1=1
+    # i= 0 then (-1)**0 = 1 2*0+1 = 1 1/1=1
     # i = 1 then (-1)**1 = -1 2*1+1=2+1 = 3 so the total is 1/3
     # It then adds up all of them to the partial sum, which the process eventually returns
     partial_sum = 0.0
