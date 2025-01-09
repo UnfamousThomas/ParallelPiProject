@@ -50,9 +50,8 @@ def calculate_pi(terms, processes):
 if __name__ == "__main__":
     # How many terms to calculate
     num_terms = int(input("Enter number of terms to calculate: "))
-    # How many processes to use, this could probably be improved a lot, but a basic decision on how many processes to use:
-    # Basically tries to allocate 1000 term calculations to each process, if more than 100, caps there.
-    num_processes = min(math.ceil(num_terms / 1000), 100)
+    # How many processes to use, this could probably be improved a lot, but just decided to go with the number of cpu cores * 2
+    num_processes = multiprocessing.cpu_count() * 2
     start_time = time.time()  # Record the start time
     pi_value = calculate_pi(num_terms, num_processes)
     end_time = time.time()  # Record the end time
